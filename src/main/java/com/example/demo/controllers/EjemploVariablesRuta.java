@@ -12,7 +12,7 @@ public class EjemploVariablesRuta {
 	
 	@GetMapping("/")
 	public String index(Model model) {
-		
+		return "variables/index";
 	}
 	
 	@GetMapping("/string/{texto}")

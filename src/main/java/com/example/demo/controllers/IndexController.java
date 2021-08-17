@@ -3,6 +3,7 @@ package com.example.demo.controllers;
 import java.util.Arrays;
 import java.util.List;
 
+//import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,14 @@ import com.example.demo.models.Usuario;
 @RequestMapping("/app")
 public class IndexController {
 	
+	/*
+	 * @Value("${texto.indexcontroller.index.titulo}") private String textoIndex;
+	 * 
+	 * @Value("${texto.indexcontroller.perfil.titulo}") private String textoPerfil;
+	 * 
+	 * @Value("${texto.indexcontroller.listar.titulo}") private String testoListar;
+	 */
+	
 	/**
 	 * Responde a una peticion get y devuelve el home
 	 * @param model clase de spring para añadir atributos al html
@@ -25,7 +34,7 @@ public class IndexController {
 	public String index(Model model) {
 		
 		model.addAttribute("titulo", "Hola Spring framework");
-		return "index";
+		return "variables/index";
 	}
 	
 	/**
